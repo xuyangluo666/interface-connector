@@ -1,0 +1,47 @@
+# 日志文件
+logs/
+*.log
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# 虚拟环境
+.venv/
+venv/
+ENV/
+
+# IDE 配置
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 环境变量和敏感信息
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# 测试文件
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 其他
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Word 和 Markdown 文档（可选，根据需要保留或删除）
+# 接口测试报告.docx
+# 接口测试报告.md
