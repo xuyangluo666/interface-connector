@@ -6,12 +6,15 @@ import sys
 import time
 from loguru import logger
 from sync.scheduler import start_scheduler
-from utils.logging_config import setup_logging
+from utils.logging_config import setup_logging, cleanup_old_logs
 
 def main():
     # 配置日志
     setup_logging()
     logger.info("接口对接服务启动")
+    
+    # 启动时清理过期日志
+    cleanup_old_logs()
 
     # 启动调度器（3分钟一次，由配置文件决定）
     scheduler = start_scheduler()

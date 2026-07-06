@@ -22,6 +22,9 @@ class Settings(BaseSettings):
     sync_interval_minutes: int = Field(3, alias="SYNC_INTERVAL_MINUTES")
     sync_batch_size: int = Field(100, alias="SYNC_BATCH_SIZE")
 
+    # 日志配置
+    log_retention_days: int = Field(7, alias="LOG_RETENTION_DAYS")
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
